@@ -1,13 +1,217 @@
-<h2>厭悪のルベランギス3 タイマー アプリ</h2>
-<p>以下のリンクから、ClickOnce インストーラーをダウンロードして起動してください。</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>厭悪のルベランギス3 ローテーションタイマー</title>
 
-<a href="setup.exe" style="font-size: 18px; font-weight: bold; color: yellow;">
-    アプリをインストールする (setup.exe)
-</a>
+    <meta property="og:title" content="ルベランギス３ タイマー">
+    <meta property="og:description" content="深淵の咎人たち「厭悪のルベランギス」強さ3専用のローテーションタイマーです。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://clahtsm02.github.io/dq10/">
+    <meta property="og:image" content="https://clahtsm02.github.io/dq10/image.png">
+    <meta name="twitter:card" content="summary_large_image">
 
-<br><br>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #00e5ff;
+            --btn-color: #ffcc00;
+        }
 
-<p>
-    既にインストール済みで起動しない場合は、直接マニフェストファイルを叩いてください：
-    <a href="TimerApp.application">TimerApp.application</a>
-</p>
+        body {
+            font-family: 'Segoe UI', Meiryo, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 1.1rem;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid #333;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-top: 0;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        .download-btn {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            background-color: var(--btn-color);
+            color: #121212;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 30px;
+            transition: all 0.2s ease;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+            background-color: #ffe066;
+        }
+
+        .manifest-link {
+            display: block;
+            text-align: center;
+            color: #aaa;
+            text-decoration: underline;
+            font-size: 0.9rem;
+            margin-top: -15px;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2a2a2a;
+            color: var(--accent-color);
+        }
+
+        .note {
+            background-color: #2c230d;
+            border-left: 4px solid #ffcc00;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background-color: #2a2a2a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+            color: #ff8a80;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>厭悪のルベランギス3 専用タイマー</h1>
+        <p class="subtitle">サークルカラミティ / グランドカラミティ 視覚化ローテーションツール</p>
+    </header>
+
+    <section>
+        <h2>アプリケーションのインストール</h2>
+        <p>ClickOnce による自動アップデート対応のインストーラーです。初回インストール時、またはアップデートは以下のボタンからどうぞ。</p>
+        
+        <a href="setup.exe" class="download-btn">アプリをインストール (setup.exe)</a>
+        <a href="TimerApp.application" class="manifest-link">起動しない場合は直接マニフェスト（.application）から実行</a>
+
+        <div class="note">
+            <strong>⚠️ Windows PC やブラウザのセキュリティ警告について</strong><br>
+            <code>setup.exe</code> をダウンロードする際、Chrome や Edge、Windows SmartScreen で「一般的にダウンロードされていないファイルです」などの警告が出ることがあります。<br>
+            <strong>「詳細」をクリックし、「保持する」や「実行する」を選択</strong>してインストールを進めてください。
+        </div>
+    </section>
+
+    <section>
+        <h2>主な機能</h2>
+        <ul>
+            <li><strong>安置パターンを画像で直感表示</strong>：サークル、グランドの各周期に合わせ、クッキリした画像で安置を表示。</li>
+            <li><strong>TTS 音声読み上げ</strong>：「まもなく線上」「次は外周広め」など、画面を見ずとも判断できる音声ガイド。</li>
+            <li><strong>最前面・透過対応</strong>：ゲーム画面を邪魔しないコンパクトな UI（右クリックで透過率 40%〜100% 変更可能）。</li>
+            <li><strong>ホットキー操作</strong>：ゲームパッドを握りながらでも、キーボードのショートカットで手軽にタイマーを操作。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>操作方法（ホットキー）</h2>
+        <p>ゲームウィンドウをアクティブにしたままでも、以下のキー入力でタイマーを操作できます。</p>
+        <table>
+            <tr>
+                <th>キー</th>
+                <th>動作</th>
+            </tr>
+            <tr>
+                <td><code>Home</code></td>
+                <td>タイマー開始（準備 ➔ 戦闘開始 ➔ モード切替）</td>
+            </tr>
+            <tr>
+                <td><code>End</code></td>
+                <td>タイマーリセット</td>
+            </tr>
+            <tr>
+                <td><code>↑ (Up)</code></td>
+                <td>タイマーを +1.0秒 調整</td>
+            </tr>
+            <tr>
+                <td><code>↓ (Down)</code></td>
+                <td>タイマーを -1.0秒 調整</td>
+            </tr>
+            <tr>
+                <td><code>PageUp</code></td>
+                <td>ギミックのステップを「進める」（強制スキップ）</td>
+            </tr>
+            <tr>
+                <td><code>PageDown</code></td>
+                <td>ギミックのステップを「戻す」</td>
+            </tr>
+        </table>
+        <p>※ ウィンドウのどこを右クリックしても、<strong>透過率の変更やアプリの終了</strong>が可能です。</p>
+    </section>
+</div>
+
+</body>
+</html>
